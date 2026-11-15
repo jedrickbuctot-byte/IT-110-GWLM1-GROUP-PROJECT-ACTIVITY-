@@ -153,6 +153,21 @@
     background: #fff8f8;
 }
 
+.success-message {
+    display: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    background: #e8f5e9;
+    color: #256b2c;
+    font-size: 13px;
+}
+
+.success-message.show {
+    display: block;
+}
+
 .error-message {
     display: block;
     min-height: 1em;

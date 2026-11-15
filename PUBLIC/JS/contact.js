@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
 
     if (!(form instanceof HTMLFormElement)) {
         return;
@@ -55,6 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         field.input.addEventListener('input', function () {
+            successMessage.classList.remove('show');
+
             if (field.input.getAttribute('aria-invalid') === 'true') {
                 validateField(field);
             }
@@ -63,6 +66,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        fields.forEach(validateField);
+        successMessage.classList.remove('show');
+
+        let isValid = true;
+
+        fields.forEach(function (field) {
+            if (!validateField(field)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            return;
+        }
+
+        successMessage.classList.add('show');
+        form.reset();
+
+        fields.forEach(function (field) {
+            field.error.textContent = '';
+            field.input.classList.remove('invalid');
+            field.input.setAttribute('aria-invalid', 'false');
+        });
     });
 });

@@ -26,6 +26,14 @@ class ContactPageTest extends TestCase
             ->assertSee('Business Hours');
     }
 
+    public function test_contact_navigation_link_points_to_contact_route(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertOk()
+            ->assertSee('<a href="'.route('contact').'" class="nav-contact">Contact</a>', false);
+    }
+
     public function test_contact_page_renders_labeled_message_fields(): void
     {
         $response = $this->get('/contact');
@@ -42,7 +50,9 @@ class ContactPageTest extends TestCase
             ->assertSee('name="message"', false)
             ->assertSee('id="emailError"', false)
             ->assertSee('class="submit-btn"', false)
-            ->assertSee('js/contact.js', false);
+            ->assertSee('js/contact.js', false)
+            ->assertSee('id="successMessage"', false)
+            ->assertSee('role="status"', false);
     }
 
     public function test_contact_page_loads_its_stylesheet(): void

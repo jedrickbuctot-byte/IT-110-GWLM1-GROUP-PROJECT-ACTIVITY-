@@ -51,6 +51,10 @@
             <h2 id="contact-form-heading">Send Us a Message</h2>
             <p>Fill out the form below and let us know how we can help.</p>
 
+            <div id="successMessage" class="success-message" role="status" aria-live="polite">
+                Your form has been validated successfully! This is a demonstration only; no message was sent.
+            </div>
+
             <form id="contactForm" aria-labelledby="contact-form-heading" novalidate>
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
