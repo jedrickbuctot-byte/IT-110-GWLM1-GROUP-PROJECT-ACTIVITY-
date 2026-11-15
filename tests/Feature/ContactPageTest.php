@@ -39,7 +39,10 @@ class ContactPageTest extends TestCase
             ->assertSee('name="email"', false)
             ->assertSee('name="subject"', false)
             ->assertSee('type="email"', false)
-            ->assertSee('name="message"', false);
+            ->assertSee('name="message"', false)
+            ->assertSee('id="emailError"', false)
+            ->assertSee('class="submit-btn"', false)
+            ->assertSee('js/contact.js', false);
     }
 
     public function test_contact_page_loads_its_stylesheet(): void
