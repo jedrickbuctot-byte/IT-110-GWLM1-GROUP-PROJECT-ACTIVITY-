@@ -25,4 +25,20 @@ class ContactPageTest extends TestCase
             ->assertSee('Our Location')
             ->assertSee('Business Hours');
     }
+
+    public function test_contact_page_renders_labeled_message_fields(): void
+    {
+        $response = $this->get('/contact');
+
+        $response->assertOk()
+            ->assertSee('<label for="fullName">Full Name</label>', false)
+            ->assertSee('<label for="email">Email Address</label>', false)
+            ->assertSee('<label for="subject">Subject</label>', false)
+            ->assertSee('<label for="message">Message</label>', false)
+            ->assertSee('name="name"', false)
+            ->assertSee('name="email"', false)
+            ->assertSee('name="subject"', false)
+            ->assertSee('type="email"', false)
+            ->assertSee('name="message"', false);
+    }
 }
