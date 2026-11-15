@@ -41,4 +41,12 @@ class ContactPageTest extends TestCase
             ->assertSee('type="email"', false)
             ->assertSee('name="message"', false);
     }
+
+    public function test_contact_page_loads_its_stylesheet(): void
+    {
+        $response = $this->get('/contact');
+
+        $response->assertOk()
+            ->assertSee('href="'.asset('css/contact.css').'"', false);
+    }
 }

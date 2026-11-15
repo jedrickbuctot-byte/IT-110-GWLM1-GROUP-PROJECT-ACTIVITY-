@@ -2,6 +2,10 @@
 
 @section('title', 'Contact Us | Gray Brew Coffee Shop')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+@endpush
+
 @section('content')
     <section class="contact-hero" aria-labelledby="contact-heading">
         <div>
