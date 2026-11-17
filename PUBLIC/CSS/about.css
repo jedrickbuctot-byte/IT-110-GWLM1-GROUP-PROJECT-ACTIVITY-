@@ -216,3 +216,79 @@
     margin-top: 5px;
 }
 
+.about-cta {
+    background: #292929;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.about-cta h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    color: #bbb;
+    margin-bottom: 25px;
+}
+
+.about-btn {
+    display: inline-block;
+    background: #A68A64;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.about-btn:hover {
+    background: white;
+    color: #292929;
+}
+
+@media(max-width: 850px) {
+    .story-section,
+    .philosophy-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .mission-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .story-section,
+    .philosophy-section {
+        padding: 60px 6%;
+    }
+
+    .story-content h2,
+    .philosophy-content h2,
+    .mission-heading h2,
+    .team-heading h2 {
+        font-size: 32px;
+    }
+
+    .story-image img,
+    .philosophy-image img {
+        height: 320px;
+    }
+
+    .mission-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-section,
+    .team-section {
+        padding: 60px 6%;
+    }
+
+    .team-card img {
+        height: 350px;
+    }
+}

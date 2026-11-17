@@ -174,6 +174,19 @@
 
 </section>
 
+<!-- ABOUT CTA -->
+<section class="about-cta">
+
+    <h2>Be Part of Our Coffee Story.</h2>
+
+    <p>We look forward to welcoming you to Gray Brew.</p>
+
+    <a href="{{ route('contact') }}" class="about-btn">
+        Contact Us
+    </a>
+
+</section>
+
 @endsection
 
 @push('scripts')
