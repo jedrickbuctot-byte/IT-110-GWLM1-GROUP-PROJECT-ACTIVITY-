@@ -1,0 +1,35 @@
+
+/* ABOUT PAGE */
+
+.about-hero {
+    height: 430px;
+    background:
+        linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
+        url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1800')
+        center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.about-hero span {
+    color: #d5b993;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.about-hero h1 {
+    font-size: clamp(40px, 6vw, 65px);
+    margin: 15px 0;
+}
+
+.about-hero p {
+    max-width: 600px;
+    color: #ddd;
+    margin: auto;
+}
+
