@@ -132,6 +132,48 @@
 
 </section>
 
+<!-- OUR TEAM -->
+<section class="team-section">
+
+    <div class="team-heading">
+        <span class="section-label">THE PEOPLE BEHIND THE BREW</span>
+        <h2>Meet Our <span>Team</span></h2>
+        <p>Passionate people making every coffee experience special.</p>
+    </div>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/32/8e/83/328e83ca7c3a67b330ea3241d0b7a851.jpg"
+                 alt="Ethan Cruz">
+            <div>
+                <h3>EARL CONQUILLA</h3>
+                <p>Head Barista</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/d6/0f/59/d60f593db0b472cadc749b142882802a.jpg"
+                 alt="Sophia Reyes">
+            <div>
+                <h3>NICKO PENAFLOR</h3>
+                <p>Store Manager</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/19/3e/33/193e331baf94a478f9a513961c34756a.jpg"
+                 alt="Daniel Santos">
+            <div>
+                <h3>JEDRICK BUCTOT</h3>
+                <p>Coffee Specialist</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 @endsection
 
 @push('scripts')
