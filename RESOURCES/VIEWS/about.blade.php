@@ -104,6 +104,34 @@
 
 </section>
 
+<!-- COFFEE PHILOSOPHY -->
+<section class="philosophy-section">
+
+    <div class="philosophy-content">
+        <span class="section-label">OUR PHILOSOPHY</span>
+        <h2>Every Detail Matters.</h2>
+
+        <p>
+            Great coffee begins with great ingredients. We believe
+            every step, from selecting the beans to preparing
+            and serving each drink, contributes to a memorable
+            experience.
+        </p>
+
+        <p>
+            We value consistency, freshness, creativity, and
+            customer satisfaction. Because at Gray Brew,
+            every cup deserves attention.
+        </p>
+    </div>
+
+    <div class="philosophy-image">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000"
+             alt="Freshly brewed coffee">
+    </div>
+
+</section>
+
 @endsection
 
 @push('scripts')

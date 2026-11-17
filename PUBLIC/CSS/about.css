@@ -157,3 +157,11 @@
     font-size: 14px;
 }
 
+.philosophy-section {
+    background: white;
+}
+
+.philosophy-content p {
+    line-height: 1.9;
+}
+
