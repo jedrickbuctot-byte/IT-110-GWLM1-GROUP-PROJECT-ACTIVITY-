@@ -70,6 +70,40 @@
 
 </section>
 
+<!-- MISSION AND VISION -->
+<section class="mission-section">
+
+    <div class="mission-heading">
+        <span class="section-label">WHAT WE BELIEVE</span>
+        <h2>Our Mission & <span>Vision</span></h2>
+    </div>
+
+    <div class="mission-grid">
+
+        <div class="mission-card">
+            <div class="mission-icon">✦</div>
+            <h3>Our Mission</h3>
+            <p>
+                To serve quality coffee and create a welcoming
+                environment where every customer feels valued,
+                comfortable, and inspired.
+            </p>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-icon">◈</div>
+            <h3>Our Vision</h3>
+            <p>
+                To become a trusted coffee destination known for
+                excellent beverages, memorable experiences,
+                and genuine customer connections.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 @endsection
 
 @push('scripts')

@@ -102,3 +102,58 @@
     background: #A68A64;
 }
 
+.mission-section {
+    background: #E5E5E5;
+    padding: 85px 8%;
+}
+
+.mission-heading,
+.team-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mission-heading h2,
+.team-heading h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-top: 12px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mission-card {
+    background: white;
+    padding: 45px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.04);
+    transition: .3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-7px);
+}
+
+.mission-icon {
+    font-size: 40px;
+    color: #A68A64;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.mission-card p {
+    color: #777;
+    font-size: 14px;
+}
+
