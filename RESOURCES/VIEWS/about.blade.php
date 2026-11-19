@@ -1,0 +1,194 @@
+
+@extends('layouts.app')
+
+@section('title', 'About Us | Gray Brew Coffee Shop')
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/about.css') }}">
+@endpush
+
+@section('content')
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+
+    <div>
+        <span>GET TO KNOW US</span>
+        <h1>Our Story, Our Passion.</h1>
+        <p>
+            Every cup has a story. Discover the passion behind
+            every brew at Gray Brew Coffee Shop.
+        </p>
+    </div>
+
+</section>
+
+<!-- OUR STORY -->
+<section class="story-section">
+
+    <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1000"
+             alt="Coffee shop interior">
+    </div>
+
+    <div class="story-content">
+
+        <span class="section-label">OUR BACKGROUND</span>
+
+        <h2>A Little Coffee Shop With A <span>Big Passion.</span></h2>
+
+        <p>
+            Gray Brew was created from a simple idea: to make every
+            coffee moment meaningful. What started as a shared love
+            for coffee grew into a welcoming space where people
+            can connect, relax, and enjoy quality beverages.
+        </p>
+
+        <div id="moreStory" class="more-story">
+
+            <p>
+                Our concept combines modern simplicity with a warm
+                coffee shop atmosphere. We focus on carefully selected
+                ingredients, thoughtful preparation, and friendly service.
+            </p>
+
+            <p>
+                At Gray Brew, we believe that a good cup of coffee
+                can make an ordinary day feel special. Whether you
+                are meeting friends, working, or simply taking a break,
+                we want every visit to be worth remembering.
+            </p>
+
+        </div>
+
+        <button id="readMoreBtn" class="read-btn"
+                aria-expanded="false" aria-controls="moreStory">
+            Read More +
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MISSION AND VISION -->
+<section class="mission-section">
+
+    <div class="mission-heading">
+        <span class="section-label">WHAT WE BELIEVE</span>
+        <h2>Our Mission & <span>Vision</span></h2>
+    </div>
+
+    <div class="mission-grid">
+
+        <div class="mission-card">
+            <div class="mission-icon">✦</div>
+            <h3>Our Mission</h3>
+            <p>
+                To serve quality coffee and create a welcoming
+                environment where every customer feels valued,
+                comfortable, and inspired.
+            </p>
+        </div>
+
+        <div class="mission-card">
+            <div class="mission-icon">◈</div>
+            <h3>Our Vision</h3>
+            <p>
+                To become a trusted coffee destination known for
+                excellent beverages, memorable experiences,
+                and genuine customer connections.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COFFEE PHILOSOPHY -->
+<section class="philosophy-section">
+
+    <div class="philosophy-content">
+        <span class="section-label">OUR PHILOSOPHY</span>
+        <h2>Every Detail Matters.</h2>
+
+        <p>
+            Great coffee begins with great ingredients. We believe
+            every step, from selecting the beans to preparing
+            and serving each drink, contributes to a memorable
+            experience.
+        </p>
+
+        <p>
+            We value consistency, freshness, creativity, and
+            customer satisfaction. Because at Gray Brew,
+            every cup deserves attention.
+        </p>
+    </div>
+
+    <div class="philosophy-image">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000"
+             alt="Freshly brewed coffee">
+    </div>
+
+</section>
+
+<!-- OUR TEAM -->
+<section class="team-section">
+
+    <div class="team-heading">
+        <span class="section-label">THE PEOPLE BEHIND THE BREW</span>
+        <h2>Meet Our <span>Team</span></h2>
+        <p>Passionate people making every coffee experience special.</p>
+    </div>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/32/8e/83/328e83ca7c3a67b330ea3241d0b7a851.jpg"
+                 alt="Ethan Cruz">
+            <div>
+                <h3>EARL CONQUILLA</h3>
+                <p>Head Barista</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/d6/0f/59/d60f593db0b472cadc749b142882802a.jpg"
+                 alt="Sophia Reyes">
+            <div>
+                <h3>NICKO PENAFLOR</h3>
+                <p>Store Manager</p>
+            </div>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/19/3e/33/193e331baf94a478f9a513961c34756a.jpg"
+                 alt="Daniel Santos">
+            <div>
+                <h3>JEDRICK BUCTOT</h3>
+                <p>Coffee Specialist</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT CTA -->
+<section class="about-cta">
+
+    <h2>Be Part of Our Coffee Story.</h2>
+
+    <p>We look forward to welcoming you to Gray Brew.</p>
+
+    <a href="{{ route('contact') }}" class="about-btn">
+        Contact Us
+    </a>
+
+</section>
+
+@endsection
+
+@push('scripts')
+<script src="{{ asset('js/about.js') }}" defer></script>
+@endpush
