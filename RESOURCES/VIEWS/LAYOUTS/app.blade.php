@@ -61,20 +61,41 @@
             color: #A68A64;
         }
 
-        .nav-contact {
-            background: #292929;
-            color: white;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: background-color .3s;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
         }
 
-        .nav-contact:hover,
-        .nav-contact:focus-visible {
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #A68A64;
+        }
+
+        .nav-contact {
+            background: #292929;
+            color: white !important;
+            padding: 11px 23px;
+            border-radius: 30px;
+        }
+
+        .nav-contact:hover {
             background: #A68A64;
-            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
         }
 
         /* FOOTER */
@@ -87,7 +108,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 45px;
             padding-bottom: 35px;
         }
@@ -107,6 +128,12 @@
         .footer a {
             color: #BBBBBB;
             font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
         }
 
         .footer a:hover {
@@ -133,6 +160,26 @@
                 padding: 16px 5%;
             }
 
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 25px;
+                flex-direction: column;
+                gap: 22px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -146,10 +193,43 @@
     <!-- MASTER NAVIGATION BAR -->
 
     <nav class="navbar">
-        <div class="logo">
+
+        <a href="{{ route('home') }}" class="logo">
             GRAY <span>BREW.</span>
-        </div>
-        <a href="{{ route('contact') }}" class="nav-contact">Contact</a>
+        </a>
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="{{ route('home') }}"
+                   class="{{ request()->routeIs('home') ? 'active' : '' }}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('about') }}"
+                   class="{{ request()->routeIs('about') ? 'active' : '' }}">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('contact') }}"
+                   class="nav-contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
     </nav>
 
     <!-- PAGE CONTENT -->
@@ -176,6 +256,22 @@
                     Experience comfort, connection, and great coffee
                     with Gray Brew.
                 </p>
+            </div>
+
+            <!-- QUICK NAVIGATION -->
+
+            <div>
+                <h4>Quick Links</h4>
+
+                <div class="footer-links">
+
+                    <a href="{{ route('home') }}">Home</a>
+
+                    <a href="{{ route('about') }}">About Us</a>
+
+                    <a href="{{ route('contact') }}">Contact Us</a>
+
+                </div>
             </div>
 
             <!-- GROUP MEMBERS (PDF REQUIREMENT) -->
@@ -206,6 +302,37 @@
         </div>
 
     </footer>
+
+    <!-- MOBILE NAVIGATION JAVASCRIPT -->
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', function () {
+
+            const isOpen = navLinks.classList.toggle('show');
+
+            menuToggle.textContent = isOpen ? '✕' : '☰';
+
+            menuToggle.setAttribute('aria-expanded', isOpen);
+
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', function () {
+
+                navLinks.classList.remove('show');
+
+                menuToggle.textContent = '☰';
+
+                menuToggle.setAttribute('aria-expanded', 'false');
+
+            });
+
+        });
+    </script>
 
     @stack('scripts')
 
