@@ -281,11 +281,11 @@
 
                 <div class="footer-members">
 
-                    <p>Member 1: [Group Leader's Name]</p>
+                    <p>Member 1: Jedrick Buctot</p>
 
-                    <p>Member 2: [Member 2 Name]</p>
+                    <p>Member 2: Earl Jan Coquilla</p>
 
-                    <p>Member 3: [Member 3 Name]</p>
+                    <p>Member 3: Nicko James Peñaflor</p>
 
                 </div>
             </div>
